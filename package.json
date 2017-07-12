@@ -1,0 +1,23 @@
+{
+  "name": "puppylove",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florcondori/PuppyLove.git"
+  },
+  "author": "flor condor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/florcondori/PuppyLove/issues"
+  },
+  "homepage": "https://github.com/florcondori/PuppyLove#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

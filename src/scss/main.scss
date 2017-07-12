@@ -1,4 +1,4 @@
-@mixin bg-imag($url,$alto,$ancho){
+@mixin bg-imag($url,$alto:"35px",$ancho:"45px"){
 	background-image: url("#{$url}");
 	height:#{$alto};
 	width:#{$ancho};
@@ -10,6 +10,13 @@
 }
 *{
 	font-family: 'Open Sans', sans-serif;
+}
+button{
+	background-color: #E74C3C;
+	border-radius: 3px;
+	outline: 0;
+	border: none;
+	letter-spacing: 5px;
 }
 header{
 	@include bg-imag("../img/banner.jpg","100vh","100%");
@@ -33,10 +40,6 @@ header{
 	button{
 		background-color: #E74C3C;
 		padding: 1.5rem 3rem;
-		border-radius: 5px;
-		outline: 0;
-		border: none;
-		letter-spacing: 5px;
 		margin: 4rem 0 10rem 0;
 	}
 	div.container{
@@ -47,14 +50,32 @@ header{
 	}
 }
 section{
+	color: white;}
+h3{
+	letter-spacing: 5px;
+	font-weight: 900;
+}
+p{
+	font-size: 1.8rem;
+	line-height: 1.5;
+}
+
+footer{
+	@include bg-imag("../img/banner.jpg","70vh","100%");
+	@extend .setting-bg;
 	color: white;
-	h3{
-		letter-spacing: 5px;
-		font-weight: 900;
+	button{
+		width: 220px;
+		display: block;
+		padding: 7px 0;
+		margin-top: 2rem;
+		margin-left: 2rem;	
+		&.transparent{
+			background-color: transparent;
+			border: 2px solid white;
+		}
 	}
-	p{
-		font-size: 1.8rem;
-	}
+
 }
 .icon{
 	display: inline-block;
@@ -65,19 +86,52 @@ section{
 	
 }
 .hueso{
-	@include bg-imag("../img/icons/bone.svg","25px","40px");
+	@include bg-imag("../img/icons/bone.svg");
 }
 .collar{
-	@include bg-imag("../img/icons/collar.svg","25px","40px");
+	@include bg-imag("../img/icons/collar.svg");
 }
 .plato{
-	@include bg-imag("../img/icons/pet-plate.svg","25px","40px");
+	@include bg-imag("../img/icons/pet-plate.svg");
+}
+.home{
+	@include bg-imag("../img/icons/pet-house.svg","45px");
+}
+.bone-rotate{
+	@include bg-imag("../img/icons/bone-rotate.svg","45px");
+}
+.dog{
+	@include bg-imag("../img/icons/dog.svg","45px");
+}
+.track{
+	@include bg-imag("../img/icons/track.svg","45px");
+}
+.track-two{
+	@include bg-imag("../img/icons/track-two.svg","45px");
+}
+.pet{
+	@include bg-imag("../img/icons/pet.svg","45px");
 }
 .bg-turqueza{
 	background-color: #48C9B0;
 }
 .bg-gray{
 	background-color: #273746;
+}
+.bg-purple{
+	background-color: rgb(78, 81, 146);
+}
+.imagen{
+	width: 100%;
+	height: 300px;
+}
+.redes-sociales{
+	position: absolute;
+	bottom:0;
+	left: 0;
+	background-color: rgba(39, 55, 70, 0.7);
+	height: 200px;
+	width: 100%;
 }
 .mh-3{
 	margin: 0 3rem;
@@ -91,7 +145,15 @@ section{
 .ph-10{
 	padding: 0 10rem;
 }
-.imagen{
-	width: 100%;
-	height: 350px;
+.mb-3{
+	margin-bottom: 3rem;
+}
+.p-7{
+	padding: 7rem;
+}
+.pl-0{
+	padding-left: 0;
+}
+.pr-0{
+	padding-right: 0;
 }
